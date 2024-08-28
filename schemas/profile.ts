@@ -40,11 +40,11 @@ const profile = {
       type: "text",
       rows: 4,
     },
-    {
-      name: "email",
-      title: "Email Address",
-      type: "string",
-    },
+    // {
+    //   name: "email",
+    //   title: "Email Address",
+    //   type: "string",
+    // },
     {
       name: "location",
       title: "Location",
@@ -64,46 +64,24 @@ const profile = {
     {
       name: "socialLinks",
       title: "Social Links",
-      type: "object",
-      description: "Add your social media links:",
-      fields: [
+      description: "Add your social medial links:",
+      type: "array",
+      of: [
         {
-          name: "github",
-          title: "Github URL",
-          type: "url",
-          initialValue: "https://github.com/",
-        },
-        {
-          name: "linkedin",
-          title: "Linkedin URL",
-          type: "url",
-          initialValue: "https://linkedin.com/in/",
-        },
-        {
-          name: "twitter",
-          title: "Twitter URL",
-          type: "url",
-          initialValue: "https://twitter.com/",
-        },
-        {
-          name: "twitch",
-          title: "Twitch URL",
-          type: "url",
-          initialValue: "https://twitch.com/",
-        },
-      ],
-      options: {
-        collapsed: false,
-        collapsible: true,
-        columns: 2,
-      },
-    },
+          type: "object",
+          fields: [
+            { name: "name", title: "Name", type: "string"},
+            { name: "url", title: "URL", type: "url", },
+            { name: "icon", title: "React Icon", type: "string"}
+          ]
+        }]
+     },
     {
       name: "skills",
       title: "Skills",
       type: "array",
       description: "Add a list of skills",
-      of: [{ type: "string" }],
+      of: [{ name: "skill", type: "string" }],
     },
   ],
 };

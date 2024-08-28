@@ -61,3 +61,7 @@ Visit [http://localhost:3000/studio][localhost-3000-studio] to edit content
 [localhost-3000-studio]: http://localhost:3000/studio
 [freecodecamp-guide]: https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs/
 [other-templates]: https://github.com/sanity-io/sanity-template-nextjs-appdir-personal-website
+
+Useful Schtuff:
+
+npx kill-port 3000

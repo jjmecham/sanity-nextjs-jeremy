@@ -1,13 +1,16 @@
-import { defineConfig } from "sanity";
-import { deskTool } from "sanity/desk";
+import { defineConfig, isDev } from "sanity";
+import {structureTool} from 'sanity/structure'
 import { schemaTypes } from "./schemas";
+import {visionTool} from '@sanity/vision'
+
+const devOnlyPlugins = [visionTool()]
 
 export default defineConfig({
   name: "sanity-nextjs-site",
   title: "Sanity Next.js Site",
-  projectId: "ga8lllhf",
+  projectId: "d412zic1",
   dataset: "production",
   basePath: "/studio",
-  plugins: [deskTool()],
+  plugins: [structureTool(), visionTool()],
   schema: { types: schemaTypes },
 });

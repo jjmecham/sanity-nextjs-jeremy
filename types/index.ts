@@ -13,7 +13,11 @@ export type ProfileType = {
   fullBio: PortableTextBlock[];
   location: string;
   resumeURL: string;
-  socialLinks: string[];
+  socialLinks: [
+    icon: string,
+    url: string,
+    name: string
+  ];
   skills: string[];
 };
 
@@ -40,4 +44,14 @@ export type ProjectType = {
     image: string;
   };
   description: PortableTextBlock[];
+};
+
+export type MasonryProps<T> = React.ComponentPropsWithoutRef<"div"> & {
+  items: T[];
+  render: (item: T, idx: number) => React.ReactNode;
+  config: {
+    columns: number | number[];
+    gap: number | number[];
+    media?: number[];
+  };
 };

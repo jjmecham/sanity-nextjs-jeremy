@@ -17,6 +17,11 @@ export async function getProfile() {
       email,
       "resumeURL": resumeURL.asset->url,
       socialLinks,
+      //[]{
+      //   name,
+      //   url,
+      //   icon
+      // },
       skills
     }`
   );
@@ -24,7 +29,7 @@ export async function getProfile() {
 
 export async function getJob() {
   return client.fetch(
-    groq`*[_type == "job"]{
+    groq`*[_type == "job"] | order(startDate desc){
       _id,
       name,
       jobTitle,

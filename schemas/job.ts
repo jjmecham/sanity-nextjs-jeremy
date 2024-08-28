@@ -39,11 +39,18 @@ const job = {
       name: "startDate",
       title: "Start Date",
       type: "date",
+       options: {
+        dateformat: 'MM-YYYY'
+       }
     },
     {
       name: "endDate",
       title: "End Date",
       type: "date",
+      initialValue: (new Date()).toISOString(),
+       options: {
+        dateFormat: 'MM-YYYY',
+      }
     },
   ],
 };

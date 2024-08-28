@@ -12,7 +12,7 @@ export default function ThemeSwitch() {
   useEffect(() =>  setMounted(true), [])
 
   if (!mounted) return (
-    <p>Loading...</p>
+    <p className="text-xs">Loading...</p>
   )
 
   if (resolvedTheme === 'dim') {

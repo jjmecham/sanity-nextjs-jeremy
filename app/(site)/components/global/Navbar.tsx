@@ -27,7 +27,7 @@ export default function Navbar() {
           <Link href="/" className="w-60 flex justify-between items-center text-primary">
             <Image src={Logo} width={75} height={75} alt="logo" /><h3>GLEAM GRAPHICS</h3>
           </Link>
-          <div className="border-green-600"><ThemeSwitch />test</div>
+          <ThemeSwitch />
           <span className="text-[8px] pt-1">change</span>
         </div>
         <nav>

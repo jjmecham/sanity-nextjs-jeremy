@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "../../icons/logo.png";
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "../ThemeSwitch";
 import { useState } from 'react'
 import { BiMenuAltRight } from 'react-icons/bi'
 import { AiOutlineClose } from 'react-icons/ai'
@@ -27,7 +27,7 @@ export default function Navbar() {
           <Link href="/" className="w-60 flex justify-between items-center text-primary">
             <Image src={Logo} width={75} height={75} alt="logo" /><h3>GLEAM GRAPHICS</h3>
           </Link>
-          <ThemeSwitch />
+          <div className="border-green-600"><ThemeSwitch />test</div>
           <span className="text-[8px] pt-1">change</span>
         </div>
         <nav>

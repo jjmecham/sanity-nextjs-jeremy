@@ -1,6 +1,7 @@
 import { getProfile } from "@/sanity/sanity.query";
 import type { ProfileType } from "@/types";
 import Logo from "./icons/Logo";
+import Image from 'next/image';
 import Job from "./components/Job";
 import { motion } from "framer-motion";
 
@@ -36,7 +37,7 @@ export default async function Home() {
           animate={{opacity: 1, scale: 1}}
           transition={{duration: 0.5}}
           >test</motion.div> */}
-      <Logo/>
+      <Image src="/logo.png" width={1036} height={537} alt="Gleam Graphics Logo" className="mx-auto w-full lg:w-5/12 md:w-80 sm:w-48" />
       </section>
       <Job />
     </main>

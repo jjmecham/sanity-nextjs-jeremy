@@ -7,7 +7,7 @@ return (
     <header className="py-6 md:px-16 px-6 border-b border-zinc-800 z-30 md:mb-28 mb-20">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <Link href="/">
-          <Image src={Logo} width={200} height={200} alt="logo" />
+          <Image src='../../icons/logo.png' width={200} height={200} alt="logo" />
         </Link>
 
 <nav className="w-screen bg-teal-500 h-fit overflow-hidden">

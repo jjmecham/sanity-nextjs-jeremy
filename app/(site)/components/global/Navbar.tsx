@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo from "../../icons/logo.png";
 import ThemeSwitch from "../ThemeSwitch";
 import { useState } from 'react'
 import { BiMenuAltRight } from 'react-icons/bi'
@@ -25,7 +24,7 @@ export default function Navbar() {
       <div className="w-screen max-w-screen-xl mx-auto flex items-center justify-between lg:px-2 sm:px-10">
         <div className="flex flex-col items-center">
           <Link href="/" className="w-60 flex justify-between items-center text-primary">
-            <Image src={Logo} width={75} height={75} alt="logo" /><h3>GLEAM GRAPHICS</h3>
+            <Image src='/logo.png' width={75} height={75} alt="logo" /><h3>GLEAM GRAPHICS</h3>
           </Link>
           <ThemeSwitch />
           <span className="text-[8px] pt-1">change</span>
